@@ -17,8 +17,11 @@
                 color: "#00FF00",
                 unfilledColor: "rgb(166, 166, 166)"
             },
-            drawShadow: false,
-            displayValue: true
+            text: {
+                textColor: "#fff",
+                displayValue: true
+            },
+            drawShadow: false
         },
         radConst = Math.PI / 180,
         fullCircle = 2 * Math.PI;
@@ -83,17 +86,17 @@
     Mambo.prototype.drawText = function () {
         var fontPx;
         this.context.textAlign = "center";
-        this.context.fillStyle = "white";
+        this.context.fillStyle = this.options.text.textColor;
         this.context.textBaseline = "bottom";
-        if(this.options.displayValue) {
+        if(this.options.text.displayValue) {
             fontPx = this.points.width / 3.5;
             this.context.font = "bold " + fontPx + "px helvetica";
-            this.context.fillText(this.options.text, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 25);
+            this.context.fillText(this.options.text.label, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 25);
             this.context.fillText(this.options.value+"%", this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 1.5);
         } else {
             fontPx = this.points.width / 2.5;
             this.context.font = "bold " + fontPx + "px helvetica";
-            this.context.fillText(this.options.text, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 2);
+            this.context.fillText(this.options.text.label, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 1.8);
         }
     };
     Mambo.prototype.getValueDegrees = function () {
