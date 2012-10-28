@@ -17,7 +17,8 @@
                 color: "#00FF00",
                 unfilledColor: "rgb(166, 166, 166)"
             },
-            drawShadow: false
+            drawShadow: false,
+            displayValue: true
         },
         radConst = Math.PI / 180,
         fullCircle = 2 * Math.PI;
@@ -45,9 +46,7 @@
             if(this.options.drawShadow) {
                 this.drawShadow();
             }
-            if(this.options.text) {
-                this.drawText();
-            }
+            this.drawText();
         }
     };
     Mambo.prototype.drawInternalCircle = function () {
@@ -82,12 +81,20 @@
         this.context.stroke();
     };
     Mambo.prototype.drawText = function () {
-        var fontPx = this.points.width / 2.5;
-        this.context.font = "bold " + fontPx + "px helvetica";
+        var fontPx;
         this.context.textAlign = "center";
         this.context.fillStyle = "white";
         this.context.textBaseline = "bottom";
-        this.context.fillText(this.options.text, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 1.8);
+        if(this.options.displayValue) {
+            fontPx = this.points.width / 3.5;
+            this.context.font = "bold " + fontPx + "px helvetica";
+            this.context.fillText(this.options.text, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 25);
+            this.context.fillText(this.options.value+"%", this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 1.5);
+        } else {
+            fontPx = this.points.width / 2.5;
+            this.context.font = "bold " + fontPx + "px helvetica";
+            this.context.fillText(this.options.text, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 2);
+        }
     };
     Mambo.prototype.getValueDegrees = function () {
         if(this.options.value) {
