@@ -91,8 +91,12 @@
         if(this.options.text.displayValue) {
             fontPx = this.points.width / 3.5;
             this.context.font = "bold " + fontPx + "px helvetica";
-            this.context.fillText(this.options.text.label, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 25);
-            this.context.fillText(this.options.value+"%", this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 1.5);
+            if(this.options.text.label && this.options.text.label.length > 0) {
+                this.context.fillText(this.options.text.label, this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 25);
+                this.context.fillText(this.options.value+"%", this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 1.5);
+            } else {
+                this.context.fillText(this.options.value+"%", this.points.x, this.points.x + this.linesAndRadiuses.internalRadius / 2.3);
+            }
         } else {
             fontPx = this.points.width / 2.5;
             this.context.font = "bold " + fontPx + "px helvetica";
