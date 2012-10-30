@@ -54,26 +54,30 @@
     };
     Mambo.prototype.drawInternalCircle = function () {
         this.context.beginPath();
+        this.context.moveTo(this.points.x, this.points.x);
         this.context.arc(this.points.x, this.points.x, this.linesAndRadiuses.internalRadius, 0, fullCircle, false);
         this.context.fillStyle = this.options.internalCircle.fill;
         this.context.lineWidth = this.linesAndRadiuses.internalLine;
+        this.context.closePath();
         this.context.strokeStyle = this.options.internalCircle.line;
         this.context.stroke();
         this.context.fill();
     };
     Mambo.prototype.drawPercentage = function () {
         this.context.beginPath();
-        this.context.lineWidth = this.linesAndRadiuses.extLine;
+        this.context.moveTo(this.points.x, this.points.x);
         this.context.arc(this.points.x, this.points.x, this.linesAndRadiuses.externalRadius, this.points.angle.start, this.points.angle.end, false);
-        this.context.strokeStyle = this.options.percentage.color;
-        this.context.stroke();
+        this.context.closePath();
+        this.context.fillStyle = this.options.percentage.color;
+        this.context.fill();
     };
     Mambo.prototype.drawExtraPercentage = function () {
         this.context.beginPath();
-        this.context.lineWidth = this.linesAndRadiuses.extLine;
+        this.context.moveTo(this.points.x, this.points.x);
         this.context.arc(this.points.x, this.points.x, this.linesAndRadiuses.externalRadius, this.points.angle.start, this.points.angle.end, true);
-        this.context.strokeStyle = this.options.percentage.unfilledColor;
-        this.context.stroke();
+        this.context.closePath();
+        this.context.fillStyle = this.options.percentage.unfilledColor;
+        this.context.fill();
     };
     Mambo.prototype.drawShadow = function () {
         this.context.beginPath();
@@ -105,8 +109,10 @@
     };
     Mambo.prototype.getValueDegrees = function () {
         if(this.options.value) {
-            return this.options.value * 3.6;
-            // return (this.options.value === 100 || this.options.value === "100") ? 99.9999 * 3.6 : this.options.value * 3.6;
+            return (this.options.value === 100 || this.options.value === "100") ? 99.9999 * 3.6 : this.options.value * 3.6;
+        } else {
+            var value = parseInt(this.element.getAttribute('data-value'), 10);
+            return (value === 100) ? 99.999 * 3.6 : value * 3.6;
         }
     };
     Mambo.prototype.checkCanvas = function () {
@@ -123,16 +129,14 @@
         };
     };
     Mambo.prototype.getLinesAndRadiuses = function () {
-        var extLine = this.points.width / 9,
-            shadowLine = this.points.width / 30,
+        var shadowLine = this.points.width / 30,
             shadowRadius = this.points.x - shadowLine / 2,
-            externalRadius = shadowRadius + (shadowLine * 2) - extLine,
+            externalRadius = shadowRadius,
             internalLine = this.points.width / 35,
-            internalRadius = externalRadius - extLine / 2;
+            internalRadius = externalRadius * 0.8;
         return {
             shadowLine: shadowLine,
             shadowRadius: shadowRadius,
-            extLine: extLine,
             externalRadius: externalRadius,
             internalLine: internalLine,
             internalRadius: internalRadius
