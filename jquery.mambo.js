@@ -15,10 +15,10 @@
             percentage: {
                 drawUnfilled: false,
                 color: "#00FF00",
-                unfilledColor: "rgb(166, 166, 166)"
+                unfilledColor: "#A6A6A6"
             },
             text: {
-                textColor: "#fff",
+                textColor: "#FFF",
                 displayValue: true
             },
             drawShadow: false
@@ -105,10 +105,8 @@
     };
     Mambo.prototype.getValueDegrees = function () {
         if(this.options.value) {
-            return (this.options.value === 100 || this.options.value === "100") ? 99.9999 * 3.6 : this.options.value * 3.6;
-        } else {
-            var value = parseInt(this.element.getAttribute('data-value'), 10);
-            return (value === 100) ? 99.999 * 3.6 : value * 3.6;
+            return this.options.value * 3.6;
+            // return (this.options.value === 100 || this.options.value === "100") ? 99.9999 * 3.6 : this.options.value * 3.6;
         }
     };
     Mambo.prototype.checkCanvas = function () {
