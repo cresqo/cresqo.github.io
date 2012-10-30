@@ -42,7 +42,7 @@
             $(this.element).css({"width": this.points.width + "px", "height": this.points.width + "px"});
             this.linesAndRadiuses = this.getLinesAndRadiuses();
             this.drawPercentage();
-            if(this.options.percentage.drawUnfilled) {
+            if(this.options.percentage.drawUnfilled && this.value !== 360) {
                 this.drawExtraPercentage();
             }
             this.drawInternalCircle();
@@ -109,7 +109,7 @@
     };
     Mambo.prototype.getValueDegrees = function () {
         if(this.options.value) {
-            return (this.options.value === 100 || this.options.value === "100") ? 99.9999 * 3.6 : this.options.value * 3.6;
+            return this.options.value * 3.6;
         } else {
             var value = parseInt(this.element.getAttribute('data-value'), 10);
             return (value === 100) ? 99.999 * 3.6 : value * 3.6;
@@ -123,8 +123,8 @@
             width: this.element.width,
             x: this.element.width / 2,
             angle: {
-                start: 270 * radConst,
-                end: (this.value - 90) * radConst
+                start: (this.value === 360) ? 0 : 270 * radConst,
+                end: (this.value === 360) ? fullCircle : (this.value - 90) * radConst
             }
         };
     };
