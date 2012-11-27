@@ -3,19 +3,20 @@
  * @author: Valerio Barrila aka NinjaTux
  * @twitter: ninjatux2k
  */
-;(function ( $, window, document, undefined ) {
+;(function ($, window, document, undefined) {
     "use strict";
     // Plugin variables
     var name = "mambo",
         defaults = {
+            value: 100,
             internalCircle: {
-                line: "#000",
-                fill: "#FF0000"
+                line: "#FFF",
+                fill: "#F2AC29"
             },
             percentage: {
                 drawUnfilled: false,
-                color: "#00FF00",
-                unfilledColor: "#A6A6A6"
+                color: "#F2762E",
+                unfilledColor: "#CCC"
             },
             text: {
                 textColor: "#FFF",
