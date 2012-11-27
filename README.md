@@ -1,4 +1,1 @@
-## Todo List
-* add data api
-* add ability to use images
-* add shadow color option
+Please refer to [jQuery Mambo Plugin](http://valeriobarrila.com/mambo,html "jQuery Mambo Plugin") page because at the moment I didn't made a good README on GitHub (as you can see)
