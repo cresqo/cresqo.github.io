@@ -23,6 +23,12 @@
     // Plugin constructor
     function Mambo (element, options) {
         this.element = element;
+        if(this.options && !this.options.percentage) {
+            var percentage = $(element).data("percentage");
+            if(percentage && percentage !== 100) {
+                this.options.percentage = percentage;
+            }
+        }
         this.options = $.extend(true, {}, defaults, options);
         this._defaults = defaults;
         this._name = name;
