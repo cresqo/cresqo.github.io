@@ -23,12 +23,6 @@
     // Plugin constructor
     function Mambo (element, options) {
         this.element = element;
-        if(this.options && !this.options.percentage) {
-            var percentage = $(element).data("percentage");
-            if(percentage && percentage !== 100) {
-                this.options.percentage = percentage;
-            }
-        }
         this.options = $.extend(true, {}, defaults, options);
         this._defaults = defaults;
         this._name = name;
@@ -98,15 +92,17 @@
                 img = new Image(),
                 iw,
                 ih,
+                ratio,
                 _this = this;
             img.src = this.options.image;
             img.onload = function() {
-                if (img.width > img.height) {
+                ratio = img.height/img.width;
+                if (img.width > max && ratio <= 1) {
                     iw = max;
-                    ih = Math.round(ih*(iw()/img.width)*100)/100;
-                } else if (img.width < img.height) {
+                    ih = Math.round(iw*ratio);
+                } else if (img.height > max) {
                     ih = max;
-                    iw = Math.round(iw*(ih()/img.height)*100)/100;
+                    iw = Math.round(ih / ratio);
                 } else {
                     iw = ih = max;
                 }
