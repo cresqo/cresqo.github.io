@@ -37,7 +37,9 @@
                 this.points = this.getPoints();
                 $(this.element).css({"width": this.points.width + "px", "height": this.points.width + "px"});
                 this.linesAndRadiuses = this.getLinesAndRadiuses();
-                this.drawPercentage();
+                if(this.options.percentage > 0) {
+                    this.drawPercentage();
+                }
                 if(this.options.ringStyle === "full" && this.percentage !== 360) {
                     this.drawExtraPercentage();
                 }
