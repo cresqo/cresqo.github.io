@@ -156,7 +156,7 @@ ul.resp-tabs-list, p {
 }
 
 .resp-tabs-list li {
-    font-weight: 1000;
+    font-weight: 600;
     color: white;
     font-size: 20px;
     display: inline-block;
@@ -226,6 +226,7 @@ h2.resp-accordion {
     border-bottom: 1px solid #2980b9!important;
     padding: 10px 15px;
     background-color:#3498db;
+    width:95%;
 }
 
 h2.resp-tab-active {
