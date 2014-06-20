@@ -42,7 +42,7 @@ header a {
 
 #tracker {
     float: right;
-    width: 25%;
+    width: 23%;
     height: auto;
 }
 
@@ -117,7 +117,7 @@ section > section {
     width: 700px;
     margin: 0 auto;
     margin-left: 2%;
-    background-color: #3498db;
+    background-color: #3498db;   
 }
 
 .demo h1 {
@@ -169,6 +169,7 @@ ul.resp-tabs-list, p {
     text-align: center;
     height: 35px;
     vertical-align: middle;
+    
 }
 
 span {
@@ -244,14 +245,17 @@ h2.resp-tab-title:last-child {
 
 ul.resp-tabs-list {
     display: none;
+
 }
 
 h2.resp-accordion {
     display: block;
+    
 }
 
 .resp-vtabs .resp-tab-content {
     border: 1px solid #2980b9;
+   
 }
 
 .resp-vtabs .resp-tabs-container {
@@ -260,6 +264,7 @@ h2.resp-accordion {
     width: 100%;
     min-height: initial;
     clear: none;
+    
 }
 
 .resp-accordion-closed {
@@ -268,5 +273,6 @@ h2.resp-accordion {
 
 .resp-vtabs .resp-tab-content:last-child {
     border-bottom: 1px solid #2980b9 !important;
+    
 }
 }
