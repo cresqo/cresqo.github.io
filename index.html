@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-9">
+<META HTTP-EQUIV="Content-language" CONTENT="tr">
+<title>Mock</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mock.css"/>
+<script type="text/javascript" src="mock.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#horizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion           
+            width: '700px', //auto or any width like 600px
+            fit: true,   // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#tabInfo');
+                var $name = $('span', $info);
+
+                $name.text($tab.text());
+
+                $info.show();
+            }
+        });
+    });
+</script>
+</head>
+<body>
+<header>
+    <section class="header">
+        <section id="logoDiv"> <img id="logo" src="../../../../Pictures/5wksejkt.bmp"></section>
+        <section id ="index"> <a href="">Home</a> <a href="">About</a> <a href="">Contact</a> <a href="">Services</a> <a href="">Donate</a> </section>
+    </section>
+</header>
+<br />
+<section class="content1">
+    <section id="statements">
+        <h1>Get Involved</h1>
+        <h3>Start donating like what others have done, for a good cause.</h3>
+        <h5>Select one of the boxes below to find out more about the donators</h5>
+        <div class="demo"> 
+            <!--Horizontal Tab-->
+            <div id="horizontalTab">
+                <ul class="resp-tabs-list">
+                    <li><span>Individuals</span></li>
+                    <li><span>Corporates</span></li>
+                    <li><span>Organisations</span></li>
+                </ul>
+                <div class="resp-tabs-container">
+                    <div>
+                        <div style="width: 100%; overflow: hidden;">
+                            <div style="width: 160px; float: left;"> <p style="margin-left:24px;margin:20px;">Hakan Ş&uuml;k&uuml;r</p>
+                                <p style="margin-left:24px;margin:20px;">Donated on:13/03/2011</p>
+                            </div>
+                            <div style="margin-left: 160px;border-left: 1px solid #106ba6;">
+                                <p style="margin-left:24px;margin:20px;">This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div style="width: 100%; overflow: hidden;background-color:#106ba6">
+                            <div style="width: 160px; float: left;"> <p style="margin-left:24px;margin:20px;">Hakan Ş&uuml;k&uuml;r</p>
+                                <p style="margin-left:24px;margin:20px;">Donated on:13/03/2011</p>
+                            </div>
+                            <div style="margin-left: 160px;border-left: 1px solid #2980b9;">
+                                <p style="text-align:left;margin-left:24px;margin:20px;">This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div style="width: 100%; overflow: hidden;">
+                            <div style="width: 160px; float: left;"> <p style="margin-left:24px;margin:20px;">Hakan Ş&uuml;k&uuml;r</p>
+                                <p style="margin-left:24px;margin:20px;">Donated on:13/03/2011</p>
+                            </div>
+                            <div style="margin-left: 160px;border-left: 1px solid #106ba6;">
+                                <p style="text-align:left;margin-left:24px;margin:20px;">This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div style="width: 100%; overflow: hidden;background-color:#106ba6">
+                            <div style="width: 160px; float: left;"><p style="margin-left:24px;margin:20px;">Hakan Ş&uuml;k&uuml;r</p>
+                                <p style="margin-left:24px;margin:20px;">Donated on:13/03/2011</p>
+                            </div>
+                            <div style="margin-left: 160px;border-left: 1px solid #2980b9;">
+                                <p style="text-align:left;margin-left:24px;margin:20px">This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>						
+                    </div>
+                    <div>
+                        <div style="width: 100%; overflow: hidden;">
+                            <div style="width: 160px; float: left;"><p style="margin-left:24px;margin:20px;">Hakan Ş&uuml;k&uuml;r</p>
+                                <p style="margin-left:24px;margin:20px;">Donated on:13/03/2011</p>
+                            </div>
+                            <div style="margin-left: 160px;border-left: 1px solid #106ba6;">
+                                <p style="text-align:left;margin-left:24px;margin:20px;">This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div style="width: 100%; overflow: hidden;background-color:#106ba6">
+                            <div style="width: 160px; float: left;"><p style="margin-left:24px;margin:20px;">Hakan Ş&uuml;k&uuml;r</p>
+                                <p style="margin-left:24px;margin:20px;">Donated on:13/03/2011</p>
+                            </div>
+                            <div style="margin-left: 160px;border-left: 1px solid #2980b9;">
+                                <p style="text-align:left;margin-left:24px;margin:20px">This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="width: 100%; overflow: hidden;">
+                            <div style="width: 160px; float: left;"><p style="margin-left:24px;margin:20px;">Hakan Ş&uuml;k&uuml;r</p>
+                                <p style="margin-left:24px;margin:20px;">Donated on:13/03/2011</p>
+                            </div>
+                            <div style="margin-left: 160px;border-left: 1px solid #106ba6;">
+                                <p style="text-align:left;margin-left:24px;margin:20px;">This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div style="width: 100%; overflow: hidden;background-color:#106ba6">
+                            <div style="width: 160px; float: left;"><p style="margin-left:24px;margin:20px;">Hakan Ş&uuml;k&uuml;r</p>
+                                <p style="margin-left:24px;margin:20px;">Donated on:13/03/2011</p>
+                            </div>
+                            <div style="margin-left: 160px;border-left: 1px solid #2980b9;">
+                                <p style="text-align:left;margin-left:24px;margin:20px">This tab has icon in consectetur adipiscing eliconse consectetur adipiscing elit. Vestibulum nibh urna, ctetur adipiscing elit. Vestibulum nibh urna, t.consectetur adipiscing elit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tracker">
+        <div>
+            <canvas class="demo-label" width="180" height="180"></canvas>
+        </div>
+        <div id="percentage"></div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div id="moneyRaised"></div>
+        <div id="moneyNeed"></div>
+        <div id="noDonated"></div>
+        <p> donations made</p>
+        <h2>Raising money for</h2>
+        <img id="charityLogo" src="fakisdis.png">
+        <h3>Singapore Children's Society</h3>
+    </section>
+</section>
+<footer></footer>
+</body>
+<script>
+var arrRaised=[28,61,93,143,45,12,69,234,233,23,23,42,531,75,98,85]; //stores donated amounts,
+var money_needed = 10000; //targeted donation amounts
+/*-----------------------*/
+var total=arrRaised.reduce(function(pv, cv) { return pv + cv; }, 0); //calculate sum of elements of arrRaised
+var percentage=total/money_needed*100;
+$(".demo-label").mambo({
+  percentage: percentage.toFixed(0)
+});
+document.getElementById("moneyRaised").innerHTML = '$' + total.toFixed(2);
+document.getElementById("noDonated").innerHTML = arrRaised.length;
+document.getElementById("moneyNeed").innerHTML = 'of $ ' + money_needed.toFixed(2) +' donated';
+</script>
+</html>

@@ -1,0 +1,268 @@
+
+section > section {
+    float: left;
+}
+
+html {
+    margin: 0 auto;
+    font-family:Segoe UI;
+}
+
+body {
+    background-color: #ecf0f1;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#index {
+    float: right;
+}
+
+#logoDiv {
+    height: 50px;
+    width: 300px;
+}
+
+#logo {
+    height: 70px;
+    width: auto;
+}
+
+header {
+    height: 70px;
+    background-color: #2c3e50;
+    width:100%;
+}
+
+header a {
+    text-decoration: none;
+}
+
+#tracker {
+    float: right;
+    width: 25%;
+    height: auto;
+}
+
+#statements {
+    width: 72%;
+    height: 100%;
+    overflow: hidden;
+}
+
+article {
+    width: 33%;
+    height: 33%;
+    border-radius: 2px;
+    background-color: white;
+}
+
+footer {
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 30px;   /* Height of the footer */
+    background: blue; 
+}
+
+#no1 {
+    float: left;
+    margin: 30px
+}
+
+#no2 {
+    float: left;
+    margin: 30px
+}
+
+#no3 {
+    float: left;
+    margin: 30px
+}
+
+#no4 {
+    float: left;
+    margin: 30px
+}
+
+h1, h3, h5 {
+    margin-left: 2%;
+}
+
+#charityLogo {
+    width: 150px;
+    height: auto;
+}
+
+#percentage {
+    font-size: 30px;
+}
+
+#moneyRaised {
+    font-size: 30px;
+}
+
+#noDonated {
+    font-size: 30px;
+}
+
+section > section {
+    float: left;
+}
+
+.demo {
+    width: 700px;
+    margin: 0 auto;
+    margin-left: 2%;
+    background-color: #3498db;
+}
+
+.demo h1 {
+    margin: 33px 0 25px;
+}
+
+.demo h3 {
+    margin: 10px 0;
+}
+
+pre {
+    background: #fff;
+}
+
+@media only screen and (max-width: 1150px) {
+
+.demo {
+    margin: 2%;
+    width: 100%;
+}
+
+.how-use {
+    float: left;
+    width: 300px;
+    display: none;
+}
+}
+
+#tabInfo {
+    display: none;
+}
+
+ul.resp-tabs-list, p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.resp-tabs-list li {
+    font-weight: 1000;
+    color:white;
+    font-size: 20px;
+    display: inline-block;
+    padding: 12px 15px;
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+    width: 29%;
+    text-align:center;
+    height: 35px;
+    vertical-align: middle;
+}
+
+span {
+     line-height: 40px;
+     vertical-align: middle;
+}
+.resp-tabs-container {
+    padding: 0px;
+    clear: left;
+    width: 100%;
+    background-color: #2980b9;
+    color:white;
+}
+
+h2.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.resp-tab-content {
+    display: none;
+    
+    overflow: auto;
+}
+
+.resp-tab-active {
+    border: 1px solid #2980b9;
+    border-bottom: 1px solid #2980b9 !important;
+    margin-bottom: -1px !important;
+    padding: 12px 14px 14px 14px !important;
+}
+
+.resp-tab-active {
+    background-color: #2980b9;
+}
+
+.resp-content-active, .resp-accordion-active {
+    display: block;
+}
+
+.resp-tab-content {
+    border: 1px solid #2980b9;
+    border-bottom: 1px solid #2980b9 !important;
+    width: 99.6%;
+}
+
+h2.resp-accordion {
+    font-size: 13px;
+    border-left: 1px solid #2980b9;
+    border-right: 1px solid #2980b9;
+    border-top: 1px solid #2980b9;
+    margin: 0px;
+    border-bottom: 1px solid #2980b9!important;
+    padding: 10px 15px;
+}
+
+h2.resp-tab-active {
+    border-bottom: 0px solid #2980b9 !important;
+    margin-bottom: 0px !important;
+    padding: 10px 15px !important;
+}
+
+h2.resp-tab-title:last-child {
+    border-bottom: 12px solid #2980b9 !important;
+    background: blue;
+}
+
+/*n change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 1150px) {
+
+ul.resp-tabs-list {
+    display: none;
+}
+
+h2.resp-accordion {
+    display: block;
+}
+
+.resp-vtabs .resp-tab-content {
+    border: 1px solid #2980b9;
+}
+
+.resp-vtabs .resp-tabs-container {
+    border: none;
+    float: none;
+    width: 100%;
+    min-height: initial;
+    clear: none;
+}
+
+.resp-accordion-closed {
+    display: none !important;
+}
+
+.resp-vtabs .resp-tab-content:last-child {
+    border-bottom: 1px solid #2980b9 !important;
+}
+}
