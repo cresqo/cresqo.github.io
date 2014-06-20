@@ -162,7 +162,7 @@
 var arrRaised=[28,61,93,143,45,12,69,234,233,23,23,42,531,75,98,85,1000]; //stores donated amounts,
 var money_needed = 10000; //targeted donation amounts
 /*-----------------------*/
-var total=arrRaised.reduce(function(pv, cv) { return pv + cv; }, 0); //calculate sum of elements of arrRaised
+var total=arrRaised.reduce(function(pv, cv) { return pv + cv; }, 0); //calculate sum of elements of arrRaised (optimised algorithm)
 var percentage=total/money_needed*100;
 $(".demo-label").mambo({
   percentage: percentage.toFixed(0)
