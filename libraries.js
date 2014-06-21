@@ -21,15 +21,7 @@
             var options = $.extend(defaults, options);            
             var opt = options, jtype = opt.type, jfit = opt.fit, jwidth = opt.width, vtabs = 'vertical', accord = 'accordion';
             var hash = window.location.hash;
-            var historyApi = !!(window.history && history.replaceState);
-            
-            //Events
-            $(this).bind('tabactivate', function(e, currentTab) {
-                if(typeof options.activate === 'function') {
-                    options.activate.call(currentTab, e)
-                }
-            });
-
+           
             //Main function
             this.each(function () {
                 var $respTabs = $(this);
@@ -144,25 +136,7 @@
                         //Trigger tab activation event
                         $currentTab.trigger('tabactivate', $currentTab);
                         
-                        //Update Browser History
-                        if(historyApi) {
-                            var currentHash = window.location.hash;
-                            var newHash = respTabsId+(parseInt($tabAria.substring(9),10)+1).toString();
-                            if (currentHash!="") {
-                                var re = new RegExp(respTabsId+"[0-9]+");
-                                if (currentHash.match(re)!=null) {                                    
-                                    newHash = currentHash.replace(re,newHash);
-                                }
-                                else {
-                                    newHash = currentHash+"|"+newHash;
-                                }
-                            }
-                            else {
-                                newHash = '#'+newHash;
-                            }
-                            
-                            history.replaceState(null,null,newHash);
-                        }
+
                     });
                     
                 });
