@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 nyp_wadp_proj
 =============
 =======
@@ -179,3 +180,7 @@ For any support
 Samson 
 Email: samson3d@gmail.com
 >>>>>>> 0cf31ed5f17f3463fa65beb4f43e5730421199ca
+=======
+Please refer to [jQuery Mambo Plugin](http://valeriobarrila.com/mambo.html "jQuery Mambo Plugin") page because at the moment I didn't made a good README on GitHub (as you can see)
+
+>>>>>>> 99a281af0f5ac471460a92f0a4b5649603935cbb
